@@ -13,7 +13,7 @@ export default async function cloneRepo(req: NextApiRequest, res: NextApiRespons
         }
 
         try {
-            const localPath = path.join(process.cwd(), 'local-repo');
+            const localPath = path.join(process.cwd(), '../../local-repo-'+ Date.now());
             const repoName = url.split("/").pop();
 
             const git: SimpleGit = simpleGit();
