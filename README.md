@@ -11,6 +11,9 @@ This project is a full-stack web application built with React, Next.js, TypeScri
 * Validation for GitHub repository URLs.
 * Interactive feedback on the status of each operation.
 
+## User Story
+
+
 ## Tech Stack
 * React
 * Next.js
