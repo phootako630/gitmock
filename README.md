@@ -12,6 +12,7 @@ This project is a full-stack web application built with React, Next.js, TypeScri
 * Interactive feedback on the status of each operation.
 
 ## User Story
+![git_mock_userstory](https://github.com/phootako630/gitmock/assets/114458211/c8c42368-cad5-43f7-b6d9-2c27a7896260)
 
 
 ## Tech Stack
