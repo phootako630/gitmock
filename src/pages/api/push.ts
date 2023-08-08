@@ -2,6 +2,12 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import simpleGit, { SimpleGit } from 'simple-git';
 import path from 'path';
 
+/**
+ * Commit and push changes.
+ * @param req: NextApiRequest
+ * @param res: NextApiResponse
+ */
+
 export default async function pushChanges(req: NextApiRequest, res: NextApiResponse) {
     if (req.method === 'POST') {
         try {

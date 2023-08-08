@@ -8,7 +8,7 @@ const CloneRepo: React.FC = () => {
     const [cloneStatus, setCloneStatus] = useState<string>("");
     const [createStatus, setCreateStatus] = useState<string>("");
     const [pushStatus, setPushStatus] = useState<string>("");
-
+    // Clone the repository from the given url
     const cloneRepo = async () => {
         setCloneStatus("Pending...");
 
@@ -30,11 +30,11 @@ const CloneRepo: React.FC = () => {
             setLocalPath(data.localPath);
             console.log("Clone successful:", data);
         } else {
-            setCloneStatus("Clone failed!");
+            setCloneStatus(data.error || "Clone failed!");
             console.error("Clone error:", data);
         }
     };
-
+    // Create a file in the repository
     const createFile = async () => {
         setCreateStatus("Pending...");
 
@@ -59,7 +59,7 @@ const CloneRepo: React.FC = () => {
             console.error("Create file error:", data);
         }
     };
-
+    // Push the changes to the repository
     const pushChanges = async () => {
         setPushStatus("Pending...");
 
@@ -83,6 +83,7 @@ const CloneRepo: React.FC = () => {
             console.error("Push changes error:", data);
         }
     };
+    //Conditionally disable the buttons
     const isCloneDisabled = !isUrlValid(repoUrl) || cloneStatus === "Pending...";
     const isCreateDisabled = !localPath || createStatus === "Pending...";
     const isPushDisabled = !localPath || pushStatus === "Pending...";

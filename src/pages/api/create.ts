@@ -3,6 +3,12 @@ import simpleGit, { SimpleGit } from 'simple-git';
 import fs from 'fs';
 import path from 'path';
 
+/**
+ * Create a file and add it to the staging area.
+ * @param req: NextApiRequest
+ * @param res: NextApiResponse
+ */
+
 export default async function createFile(req: NextApiRequest, res: NextApiResponse) {
     if (req.method === 'POST') {
         try {
